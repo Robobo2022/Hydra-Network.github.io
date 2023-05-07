@@ -32,21 +32,18 @@ body {
     align-items: center;
     justify-content: flex-start;
     backdrop-filter: blur(10px);
-    padding: 0 20px;
 }
-  
+
 .navbar h1 {
     margin: 0;
+    padding-left: 20px;
     font-size: 20px;
     font-weight: 500;
 }
-  
-.navbar .links {
-    margin-left: auto;
-}
-  
-.navbar .links a {
+
+.navbar .links .Discord {
     text-decoration: none;
+    margin-left: 85vw;
     font-size: 18px;
     font-weight: 500;
     color: #fff;
@@ -54,31 +51,34 @@ body {
     padding: 4px 8px;
     outline: none;
     transition: outline 0.3s fast-in-out;
-    margin-left: 10px;
-}
-  
-@media screen and (max-width: 768px) {
-    .navbar h1 {
-      font-size: 16px;
-    }
-  
-    .navbar .links a {
-      font-size: 14px;
-    }
 }
 
-.navbar .links .Purchase:hover,
 .navbar .links .Discord:hover {
+    outline: 1px solid white;
+}
+
+.navbar .links .Purchase {
+    text-decoration: none;
+    margin-left: -10vw;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    transition: outline 0.3s fast-in-out;
+}
+
+.navbar .links .Purchase:hover {
     outline: 1px solid white;
 }
 
 .card-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .card-container .card {
@@ -89,10 +89,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 0 10px 20px;
+    margin: 0 10px;
     color: #fff;
     text-align: center;
     transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
+    padding: 20px;
     outline: 0.5px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -130,22 +132,15 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .arrow-button a.rotate {
+}
+
+.arrow-button a.rotate {
     transform: rotate(180deg);
-  }
-  
-  .arrow-button a:hover {
+}
+
+.arrow-button a:hover {
     background-color: rgba(255, 255, 255, 1);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .arrow-button a {
-      display: none;
-    }
-  }
-  
+}
 
 .arrow-button .tooltiptext {
     visibility: hidden;
@@ -166,16 +161,10 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-  
+
 .arrow-button:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-}
-  
-@media screen and (max-width: 768px) {
-    .arrow-button .tooltiptext {
-      display: none;
-    }
 }
 
 #next-section {
@@ -187,16 +176,17 @@ body {
 }
 
 #next-section .loadstring {
-    width: 100%;
-    max-width: 850px;
+    width: 850px;
     height: 200px;
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    position: relative;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, 450%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,18 +197,6 @@ body {
     outline: 0.5px solid rgba(255, 255, 255, 0.3);
 }
 
-@media (min-width: 768px) {
-    #next-section .loadstring {
-        width: 850px;
-        height: 200px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-
-
 #next-section .loadstring:hover {
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -227,43 +205,4 @@ body {
 #next-section .loadstring.clicked {
     outline: 0.5px solid rgba(43, 255, 0, 1);
     animation: fadeOut 1s forwards;
-}
-
-.second-navbar {
-    height: 50px;
-    background-color: rgba(21, 21, 21, 0.4);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    backdrop-filter: blur(10px);
-    padding: 0 20px;
-}
-  
-.second-navbar h1 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 500;
-}
-  
-.second-navbar .links {
-    margin-left: auto;
-}
-  
-.second-navbar .links a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    border-radius: 4px;
-    padding: 4px 8px;
-    outline: none;
-    transition: outline 0.3s fast-in-out;
-    margin-left: 10px;
-}
-  
-@media screen and (max-width: 768px) {
-    .second-navbar {
-        display: none;
-    }
 }
