@@ -53,8 +53,9 @@ body {
     transition: outline 0.3s fast-in-out;
 }
 
-.navbar .links .Discord:hover {
-    outline: 1px solid white;
+.navbar .links .Discord:hover,
+.navbar .links .Purchase:hover {
+outline: 1px solid white;
 }
 
 .navbar .links .Purchase {
@@ -67,10 +68,6 @@ body {
     padding: 4px 8px;
     outline: none;
     transition: outline 0.3s fast-in-out;
-}
-
-.navbar .links .Purchase:hover {
-    outline: 1px solid white;
 }
 
 .card-container {
