@@ -2,10 +2,11 @@
   "name": "hydra-network.github.io",
   "version": "1.0.0",
   "description": "Website",
-  "main": "index.tx",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsx"
+    "wpw": "webpack --watch",
+    "serve": "http-server build"
   },
   "keywords": [],
   "author": "",
