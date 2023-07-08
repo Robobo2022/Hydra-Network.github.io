@@ -1,0 +1,16 @@
+{
+  "name": "hydra-network.github.io",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
